@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Megha</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body style="margin:0; font-family: 'Poppins', sans-serif;">
+     <div class="moon"></div>
+    <div id="stars"></div>
+
+    <div class="rainbow-animate">
+        <h1>Here is something for YOU ❤️</h1>
+
+        <div class="photo-grid">
+            <img src="train.jpg" alt="My Photo" class="padded-img">
+            <img src="1st pic samaleswari.jpg" alt="My Photo" class="padded-img">
+            <img src="2nd pic samaleswari.jpg" alt="My Photo" class="padded-img">
+            <img src="3rd pic samaleswari.jpg" alt="My Photo" class="padded-img">
+            <img src="4th pic samalwsawri.jpg" alt="My Photo" class="padded-img">
+            <img src="brightness.jpg" alt="My Photo" class="padded-img">
+            <img src="class saree.jpg" alt="My Photo" class="padded-img">
+            <img src="click on top samleswari night.jpg" alt="My Photo" class="padded-img">
+            <img src="college outside.jpg" alt="My Photo" class="padded-img">
+            <img src="college trip.jpg" alt="My Photo" class="padded-img">
+            <img src="flower bush.jpg" alt="My Photo" class="padded-img">
+            <img src="ghanteswari.jpg" alt="My Photo" class="padded-img">
+            <img src="gussa on late.jpg" alt="My Photo" class="padded-img">
+            <img src="handson.jpg" alt="My Photo" class="padded-img">
+            <img src="hirakud dam.jpg" alt="My Photo" class="padded-img">
+            <img src="hirakud garrden.jpg" alt="My Photo" class="padded-img">
+            <img src="khiri eat.jpg" alt="My Photo" class="padded-img">
+            <img src="kiit intern.jpg" alt="My Photo" class="padded-img">
+            <img src="last meet.jpg" alt="My Photo" class="padded-img">
+            <img src="pink saree 1.jpg" alt="My Photo" class="padded-img">
+            <img src="pink saree 2.jpg" alt="My Photo" class="padded-img">
+            <img src="samaleswari night.jpg" alt="My Photo" class="padded-img">
+            <img src="sambal pur zoo.jpg" alt="My Photo" class="padded-img">
+            <img src="Saree.jpg" alt="My Photo" class="padded-img">
+            <img src="Screenshot_2024-02-29-16-49-53-22_1c337646f29875672b5a61192b9010f9.jpg" alt="My Photo" class="padded-img">
+            <img src="temple.jpg" alt="My Photo" class="padded-img">
+            <img src="yellow kurti.jpg" alt="My Photo" class="padded-img">
+        </div>
+
+        <div class="hands">
+            <span class="left-hand">♥️</span>
+             <button id="birthday-btn">🎉 Click Me 🎉</button>
+            <span class="right-hand">♥️</span>
+        </div>
+    </div>
+
+    <script>
+    function fadeInAudio(audio, targetVolume, duration) {
+        audio.volume = 0;
+        let step = targetVolume / (duration / 100);
+        let fade = setInterval(() => {
+            if (audio.volume < targetVolume) {
+                audio.volume = Math.min(audio.volume + step, targetVolume);
+            } else {
+                clearInterval(fade);
+            }
+        }, 100);
+    }
+
+    const song1 = document.getElementById("song1");
+
+    
+    song1.play().then(() => {
+        fadeInAudio(song1, 0.8, 4000);
+    }).catch(() => {
+        
+        document.body.addEventListener("click", () => {
+            song1.play();
+            fadeInAudio(song1, 0.8, 4000);
+        }, { once: true });
+    });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
